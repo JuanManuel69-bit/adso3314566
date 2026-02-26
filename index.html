@@ -5,53 +5,110 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ADSO 3314566</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inder&display=swap');
-        body {
-            background: linear-gradient(yellow,purple);
-            color: white;
-            font-family: Inder;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100dvh;
-            main {
-                h1 {
-                    font-size: 3.4rem;
-                    margin: 0;
-                }
-                img {
-                    border: 6px solid purple;
-                    border-radius: 50%;
-                    height: 240px;
-                    display: flex;
-                    margin: 1rem auto;
-                    width: 240px;
-                }
-                h4 {
-                    text-align: center;
-                    font-size: 1.4rem;
-                }
-            }
-            menu {
-                display: flex;
-                flex-direction: column;
-                gap: 0.6rem;
-                a:link, a:visited {
-                    background-color: purple;
-                    color: black;
-                    border-radius: 12rem;
-                    padding: 0.4rem;
-                    display: flex;
-                    align-items: center;
-                    height: 80px;
-                    width: 80px;
-                }
-                h4 {
-                    margin: 0;
-                }
-            }
+    @import url('https://fonts.googleapis.com/css2?family=Inder&display=swap');
+    
+    body {
+        background: linear-gradient(yellow, purple);
+        color: white;
+        font-family: 'Inder', sans-serif;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100dvh;
+        margin: 0;
+        padding: 20px;
+    }
+
+    main {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    main h1 {
+        font-size: 3.4rem;
+        margin: 0 0 10px 0;
+    }
+
+    main img {
+        border: 6px solid purple;
+        border-radius: 50%;
+        height: 240px;
+        width: 240px;
+        object-fit: cover;
+        display: block;
+        margin: 20px auto;
+    }
+
+    main h4 {
+        text-align: center;
+        font-size: 1.4rem;
+        margin: 10px 0 0 0;
+    }
+
+    menu {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        max-width: 800px;
+    }
+
+    menu a {
+        background-color: purple;
+        color: black;
+        border-radius: 50%;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 120px;
+        width: 120px;
+        text-decoration: none;
+        text-align: center;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    }
+
+    menu a:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+        background-color: #8a2be2;
+    }
+
+    menu a:link,
+    menu a:visited {
+        background-color: purple;
+        color: black;
+    }
+
+    menu h4 {
+        margin: 0;
+        font-size: 1rem;
+        line-height: 1.4;
+    }
+
+    @media (max-width: 768px) {
+        menu {
+            gap: 20px;
         }
-    </style>
+        
+        menu a {
+            height: 100px;
+            width: 100px;
+            padding: 15px;
+        }
+        
+        main h1 {
+            font-size: 2.5rem;
+        }
+    }
+</style>
 </head>
 <body>
     <main>

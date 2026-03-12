@@ -5,143 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>01-emet</title>
-    <style>
-        body {
-            background-color: purple;
-            color: yellow;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0;
-            padding: 20px;
-            min-height: 100vh;
-            box-sizing: border-box;
-        }
-
-        main {
-            max-width: 400px;
-            width: 100%;
-            margin: 0 auto;
-        }
-
-        a.btn-home {
-            border: 2px solid white;
-            border-radius: 50%;
-            position: fixed;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 42px;
-            height: 42px;
-            opacity: .4;
-            padding: 0.4rem;
-            top: 1rem;
-            left: 1rem;
-            transition: all 0.46s ease-in;
-            z-index: 100;
-            background-color: rgba(0,0,0,0.3);
-        }
-
-        a.btn-home:hover {
-            transform: scale(1.1);
-            opacity: 1;
-        }
-
-        a.btn-home svg {
-            width: 24px;
-            height: 24px;
-            fill: white;
-        }
-
-        main h1 {
-            text-align: center;
-            margin: 0 0 0.5rem 0;
-            font-size: 2.5rem;
-        }
-
-        main > h4 {
-            text-align: center;
-            margin: 0 0 1rem 0;
-            font-size: 1.2rem;
-        }
-
-        main > img {
-            display: block;
-            margin: 0 auto 2rem auto;
-            max-width: 100%;
-            height: auto;
-            border-radius: 10px;
-        }
-
-        section {
-            background-color: black;
-            border-radius: 0.8rem;
-            padding: 1rem;
-            text-align: left;
-            margin-bottom: 1.5rem;
-            width: 100%;
-            box-sizing: border-box;
-            overflow: hidden;
-        }
-
-        section h2 {
-            margin: 0 0 0.5rem 0;
-            border-bottom: 2px solid yellow;
-            padding-bottom: 0.4rem;
-            font-size: 1.4rem;
-        }
-
-        section h4 {
-            margin: 0.8rem 0 0.2rem 0;
-            font-size: 1.1rem;
-            color: #ff0;
-        }
-
-        section p {
-            font-size: 1.2rem;
-            padding: 0.3rem 0;
-            margin: 0;
-            font-family: monospace;
-            background-color: #330;
-            border-radius: 0.4rem;
-            padding: 0.4rem;
-        }
-
-        section xmp {
-            background-color: #1a1a1a;
-            border-radius: 0.6rem;
-            color: #0f0;
-            margin: 0.5rem 0 0 0;
-            font-size: 0.9rem;
-            padding: 1rem;
-            white-space: pre-wrap;
-            word-wrap: break-word;
-            font-family: 'Courier New', monospace;
-            border: 1px solid #444;
-            overflow-x: auto;
-            max-width: 100%;
-        }
-
-        @media (max-width: 480px) {
-            body {
-                padding: 10px;
-            }
-            
-            main {
-                max-width: 100%;
-            }
-            
-            section {
-                padding: 0.8rem;
-            }
-            
-            section h2 {
-                font-size: 1.2rem;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="../src/css/01-emmet.css">
 </head>
-
 <body>
     <a href="../index.html" class="btn-home">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
@@ -151,7 +16,7 @@
     <main>
         <h1>01-emmet</h1>
         <h4>work flow-markup & styling</h4>
-        <img src="emmet.png" alt="Emmet">
+        <img src="../src/imgs/emmet.png" alt="Emmet">
         <section>
             <h2>Anidar Elementos</h2>
             <h4>Ejemplo:</h4>

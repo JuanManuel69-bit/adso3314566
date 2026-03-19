@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03-Anchor</title>
+    <link rel="stylesheet" href="../src/css/02-html.css">
+<style>
+    html{
+        scroll-behavior: smooth;
+    }
+    section{
+        max-width: 380px;
+        a:is(:link, :visited) {
+            color: #fff;
+        }
+    }
+</style>
+</head>
+
+<body>
+    <a href="../02-html/index.html" class="btn-home">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256">
+            <path
+                d="M184,72H128V32a8,8,0,0,0-13.66-5.66l-96,96a8,8,0,0,0,0,11.32l96,96A8,8,0,0,0,128,224V184h56a8,8,0,0,0,8-8V80A8,8,0,0,0,184,72Zm-8,96H120a8,8,0,0,0-8,8v28.69L35.31,128,112,51.31V80a8,8,0,0,0,8,8h56Zm48-88v96a8,8,0,0,1-16,0V80a8,8,0,0,1,16,0Z">
+            </path>
+        </svg>
+    </a>
+    <main>
+        <header>
+            <a name="top"></a>
+            <h1>03-Anchor</h1>
+            <h2>Links to other pages or resources.</h2>
+        </header>
+        <section>
+            <h3>Links to web</h3>
+            <a href="http://www.google.com" target="_blank">Google</a>&nbsp;|&nbsp;
+            <a href="http://www.youtube.com" target="_blank">Youtube</a>&nbsp;|&nbsp;
+            <a href="http://www.instagram.com" target="_blank">Instagram</a>
+            <h3>Anchor to a section of page:</h3>
+            <a name="top"></a>
+            <br>
+            <a href="#bottom">Go to bottom page</a>
+            <br>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat dolor dicta perspiciatis sapiente velit praesentium quis corrupti assumenda officia eius doloribus deleniti, vitae itaque. Inventore iure optio nemo mollitia nulla.
+            </p>
+            <h3>Bottom Page</h3>
+            <a name="bottom"></a>
+            <br>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores atque veritatis qui. Dolores natus, hic ipsam qui itaque recusandae error voluptatum omnis consequatur sint perferendis facilis corrupti nam! Doloribus, unde!
+                Asperiores ullam ex animi magni eos vitae fugiat, iusto in quae odio saepe facilis molestias autem error rerum cum quasi, quidem dolorum hic temporibus voluptatibus inventore. Dolor impedit dolores in!
+                Aliquid vitae deleniti modi illum voluptatibus voluptas dolores, commodi placeat ullam repellat tenetur sed fuga officia necessitatibus odit harum, quis ratione aperiam. Voluptate, esse. Facilis doloremque vel veniam inventore nemo!
+                Quam sint voluptates magnam ea saepe est perspiciatis, debitis consequuntur cum veniam iste praesentium odit atque dolorum voluptatem, a iure modi quo facere culpa esse harum fugiat? Iste, unde delectus.
+                Veniam sequi blanditiis, in magni, illo facilis quasi voluptas dolorum ex ipsa tenetur provident commodi deleniti? Tenetur distinctio, deleniti quisquam, id sint cumque dolorem odio ipsa itaque nostrum illo nisi.
+            </p>
+            <a href="#top">Go to top page</a>
+        </section>
+    </main>
+</body>
+
+</html>

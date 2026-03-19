@@ -16,6 +16,25 @@ body {
     padding: 20px;
 }
 
+
+main header h2 {
+    color: rgba(255, 255, 255, 0.7); 
+    font-weight: normal; 
+    font-size: 1.5rem; 
+}
+
+
+section { 
+    background-color: rgba(0, 0, 0, 0.8); 
+    border: 1px solid rgba(255, 255, 255, 0.2); 
+    border-radius: 12px; 
+    min-width: 380px;
+    max-width: 600px; 
+    padding: 25px; 
+    margin: 20px auto;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5); 
+}
+
 a.btn-home {
     border: 2px solid white;
     border-radius: 50%;
@@ -66,19 +85,14 @@ main img {
     margin: 20px auto;
 }
 
-main h4 {
-    text-align: center;
-    font-size: 1.2rem;
-    margin: 10px 0 0 0;
-}
 
 menu {
     display: flex;
-    flex-direction: column;  /* Cambiado de 'row' a 'column' para alineación vertical */
-    align-items: center;      /* Centrar los círculos verticalmente */
-    gap: 20px;                /* Espacio reducido entre círculos */
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
     padding: 0;
-    margin: 30px auto 0;      /* Ajustado el margen superior */
+    margin: 30px auto 0;
     list-style: none;
     max-width: 800px;
 }
@@ -87,13 +101,13 @@ menu a {
     background-color: orangered;
     color: black;
     border-radius: 50%;
-    padding: 15px;            /* Reducido el padding */
+    padding: 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 80px;             /* Reducido de 120px a 80px */
-    width: 80px;              /* Reducido de 120px a 80px */
+    height: 80px;
+    width: 80px;
     text-decoration: none;
     text-align: center;
     transition: all 0.3s ease;
@@ -103,50 +117,5 @@ menu a {
 menu a:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 12px rgba(0,0,0,0.4);
-    background-color: #ff4500;  /* Corregido: orangered más sólido */
-    height: 80px;               /* Mantener mismo tamaño en hover */
-    width: 80px;                /* Mantener mismo tamaño en hover */
-}
-
-menu a:link,
-menu a:visited {
-    background-color: orangered;
-    color: black;
-    height: 80px;               /* Corregido: estaba '40' sin unidades */
-    width: 80px;                /* Corregido: estaba '40' sin unidades */
-}
-
-menu h4 {
-    margin: 5px 0 0 0;         /* Ajustado el margen */
-    font-size: 0.9rem;         /* Reducido el tamaño de fuente */
-    line-height: 1.2;
-}
-
-menu span {
-    font-size: 1.2rem;         /* Tamaño para los números */
-    font-weight: bold;
-}
-
-@media (max-width: 768px) {
-    menu {
-        gap: 15px;              /* Reducido el gap en móvil */
-    }
-    
-    menu a {
-        height: 70px;           /* Aún más pequeño en móvil */
-        width: 70px;
-        padding: 12px;
-    }
-    
-    main h1 {
-        font-size: 2.5rem;
-    }
-    
-    menu h4 {
-        font-size: 0.8rem;      /* Texto más pequeño en móvil */
-    }
-    
-    menu span {
-        font-size: 1rem;        /* Números más pequeños en móvil */
-    }
+    background-color: #ff4500;
 }

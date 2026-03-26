@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>08-Images</title>
+    <title>12-graphics</title>
     <link rel="stylesheet" href="../src/css/02-html.css">
 </head>
 
@@ -18,15 +18,19 @@
     </a>
     <main>
         <header>
-            <h1>08-Images</h1>
-            <h2>Inserts an image.</h2>
+            <h1>12-Graphics</h1>
+            <h2>Creates inline graphics with tags.</h2>
         </header>
         <section>
-            <h3>Relative path:</h3>
-            <img src="../src/imgs/goku-dragon-ball-super-r33dysxh1ubub7nk.jpg" alt="Goku">
-            <h3>Absolute Path:</h3>
-            <img src="https://shorturl.at/raRAU" alt="Vegeta
-            ">
+            <div> <canvas id="myCanvas" width="200" height="100" style="border:1px solid orange;">
+                </canvas></div>
+            <div>
+                <script>
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        ctx.font = "30px Arial";
+        ctx.fillText("Hola Mundo", 10, 50);
+    </script>
         </section>
     </main>
 </body>

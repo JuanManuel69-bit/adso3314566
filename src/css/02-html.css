@@ -146,7 +146,3 @@ svg.spider-icon {
     filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5)); 
     transition: transform 0.3s ease;
 }
-
-svg.spider-icon:hover {
-    transform: scale(1.1) rotate(10deg);
-}

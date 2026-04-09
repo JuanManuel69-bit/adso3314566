@@ -22,58 +22,47 @@
             <h2>Creates interactive forms for user input.</h2>
         </header>
         <section>
-            <form action="procesar_datos" method="post" class="custom-form">
-
+            <form action="procesar_datos" method="post" class="custom-form" enctype="multipart/form-data">
                 <div class="form-group">
                     <label for="usuario">Nombre de Usuario:</label>
                     <input type="text" id="usuario" name="usuario" placeholder="Tu apodo">
                 </div>
-
                 <div class="form-group">
                     <label for="pass">Contraseña:</label>
                     <input type="password" id="pass" name="password" placeholder="Mínimo 8 caracteres">
                 </div>
-
                 <div class="form-group">
                     <label for="correo">Correo:</label>
                     <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com">
                 </div>
-
                 <div class="form-group">
                     <label for="telefono">Telefono:</label>
                     <input type="tel" id="telefono" name="telefono" placeholder="+57 ...">
                 </div>
-
                 <div class="form-group">
                     <label for="web">Sitio Personal:</label>
                     <input type="url" id="web" name="web" placeholder="https://tu-sitio.com">
                 </div>
-
                 <div class="form-group">
                     <label for="fecha">Fecha:</label>
                     <input type="date" id="fecha" name="fecha">
                 </div>
-
                 <div class="form-group">
                     <label for="hora">Hora:</label>
                     <input type="time" id="hora" name="hora">
                 </div>
-
                 <div class="form-group">
                     <label for="mes">Mes:</label>
                     <input type="month" id="mes" name="mes">
                 </div>
-
                 <div class="form-group">
                     <label for="semana">Semana:</label>
                     <input type="week" id="semana" name="semana">
                 </div>
-
                 <div class="form-group">
                     <label for="cita">Cita completa:</label>
                     <input type="datetime-local" id="cita" name="cita">
                 </div>
-
                 <div class="form-group">
                     <label>Género:</label>
                     <div class="options-row">
@@ -81,7 +70,6 @@
                         <input type="radio" id="f" name="gen" value="f"> <label for="f">Femenino</label>
                     </div>
                 </div>
-
                 <div class="form-group">
                     <label>Suscripciones:</label>
                     <div class="options-row">
@@ -89,39 +77,29 @@
                         <input type="checkbox" id="prom" name="sub" value="2"> <label for="prom">Promociones</label>
                     </div>
                 </div>
-
                 <div class="form-group">
                     <label for="tono">Color preferido:</label>
                     <input type="color" id="tono" name="tono" value="#ff430b">
                 </div>
-
                 <div class="form-group">
                     <label for="nivel">Volumen:</label>
                     <input type="range" id="nivel" name="nivel" min="0" max="100">
                 </div>
-
                 <div class="form-group">
                     <label for="cantidad">Cantidad:</label>
                     <input type="number" id="cantidad" name="cantidad" min="1" max="10">
                 </div>
-
                 <div class="form-group">
                     <label for="busqueda">Búsqueda:</label>
                     <input type="search" id="busqueda" name="busqueda" placeholder="Buscar contenido...">
                 </div>
-
-                <input type="hidden" name="token_seguridad" value="12345ABCDE">
-
-                <div class="button-grid">
-                    <input type="button" value="Click (button)" onclick="alert('Hola')">
-
-                    <label>Enviar vía Imagen:</label>
-                    <input type="image" src="https://via.placeholder.com/50x20/ff430b/ffffff?text=ENVIAR" alt="Submit">
-
+                <div class="form-group">
+                    <label for="foto">Seleccionar Imagen:</label>
+                    <input type="file" id="foto" name="foto" accept="image/*">
+                </div>
                     <input type="reset" value="Limpiar (reset)" class="btn-reset">
                     <input type="submit" value="Enviar Datos (submit)" class="btn-submit">
                 </div>
-
             </form>
         </section>
     </main>

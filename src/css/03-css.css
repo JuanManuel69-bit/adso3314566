@@ -173,3 +173,17 @@ ul.fruits > li + li{
 ul.fruits > li + li + li{
     background-color: green;
 }
+
+ul.selectors{
+    justify-content: center;
+    display: flex;
+    color: #fff;
+    flex-direction: column;
+    list-style: none;
+}
+
+body main header ul.selectors{
+    width: 20%;
+    margin-left: auto;
+    margin-right: auto;
+}

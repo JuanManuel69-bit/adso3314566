@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Inder&display=swap');
+
+body {
+    background-color: #330033;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%23404' stroke-width='1'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3Cg fill='%23505'%3E%3Ccircle cx='769' cy='229' r='5'/%3E%3Ccircle cx='539' cy='269' r='5'/%3E%3Ccircle cx='603' cy='493' r='5'/%3E%3Ccircle cx='731' cy='737' r='5'/%3E%3Ccircle cx='520' cy='660' r='5'/%3E%3Ccircle cx='309' cy='538' r='5'/%3E%3Ccircle cx='295' cy='764' r='5'/%3E%3Ccircle cx='40' cy='599' r='5'/%3E%3Ccircle cx='102' cy='382' r='5'/%3E%3Ccircle cx='127' cy='80' r='5'/%3E%3Ccircle cx='370' cy='105' r='5'/%3E%3Ccircle cx='578' cy='42' r='5'/%3E%3Ccircle cx='237' cy='261' r='5'/%3E%3Ccircle cx='390' cy='382' r='5'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+
+main header h2 {
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: normal;
+    font-size: 1.5rem;
+}
+
+.header_01{
+    color: beige;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    min-width: 380px;
+    max-width: 600px;
+    padding: 25px;
+    margin: 20px auto;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+section {
+    color: cornsilk;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    min-width: 380px;
+    max-width: 600px;
+    padding: 25px;
+    margin: 20px auto;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+a.btn-home {
+    border: 2px solid white;
+    border-radius: 50%;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    opacity: .4;
+    padding: 0.4rem;
+    top: 1rem;
+    left: 1rem;
+    transition: all 0.46s ease-in;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+a.btn-home:hover {
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+a.btn-home svg {
+    width: 24px;
+    height: 24px;
+    fill: white;
+}
+
+main {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+main h1 {
+    font-size: 2.8rem;
+    text-align: center;
+    margin: 0;
+}
+
+main img {
+    border: 6px solid #fff;
+    border-radius: 50%;
+    height: 240px;
+    width: 240px;
+    object-fit: cover;
+    display: block;
+    margin: 20px auto;
+}
+
+
+menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 0;
+    margin: 30px auto 0;
+    list-style: none;
+    max-width: 800px;
+}
+
+menu a {
+    background-color: darkorchid;
+    color: black;
+    border-radius: 25px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    width: 200px;
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+menu a:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+    background-color: darkorchid;
+}
+
+section div {
+    margin-bottom: 30px;
+}
+
+#h1_1 {
+    color: darkorchid;
+}
+
+
+#h4_1 {
+    color: darkorchid;
+}
+
+.h3_1 {
+    border-bottom: 1px solid white;
+    color: #fff;
+}
+
+.h3_2 {
+    border-bottom: 1px solid white;
+    color: #fff;
+}
+
+.menus {
+    display: flex;
+    flex-direction: row !important;
+    align-items: start;
+    justify-content: center;
+}

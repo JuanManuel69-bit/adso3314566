@@ -7,10 +7,86 @@
     <title>17-visualization</title>
     <link rel="stylesheet" href="/src/css/03-css.css">
     <style>
-        div.numeros{
-            border: 4px solid purple;
-        }
-    </style>
+    .box {
+        width: 100px;
+        height: 100px;
+        border: 4px solid purple;
+        background-color: black;
+        color: aqua;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px;
+    }
+
+    
+    .block { display: block; width: 100px; }
+    .inline { display: inline; }
+    .none { display: none; }
+    .flex { display: flex; border: 1px solid gray; }
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5px; }
+
+    
+    .hidden { visibility: hidden; }
+
+    
+    .parent-overflow {
+        width: 150px;
+        height: 100px;
+        border: 4px solid purple;
+        background-color: #111;
+        margin-bottom: 30px;
+    }
+    .o-visible { overflow: visible; }
+    .o-hidden { overflow: hidden; }
+    .o-scroll { overflow: scroll; }
+    .o-auto { overflow: auto; }
+
+
+.z-container {
+    position: relative;
+    height: 250px;
+    padding: 20px;
+}
+
+.z-box {
+    position: absolute;
+    width: 150px;
+    height: 80px;
+    border: 2px solid black;
+    display: flex;
+    padding-left: 10px;
+    padding-top: 5px;
+    font-size: 2.5rem;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    color: white;
+}
+
+
+.gris-oscuro { 
+    background-color: #666666; 
+    top: 20px; 
+    left: 20px; 
+    z-index: 1; 
+}
+
+
+.gris-medio { 
+    background-color: #999999; 
+    top: 60px; 
+    left: 70px; 
+    z-index: 5; 
+}
+
+
+.gris-claro { 
+    background-color: #cccccc; 
+    top: 100px; 
+    left: 130px; 
+    z-index: 10; 
+}
+</style>
 </head>
 
 <body>
@@ -23,22 +99,60 @@
     </a>
     <main>
         <header>
-            <h1 id="h1_1">17 Visualization</h1>
-            <h2></h2>
-        </header>
-        <section>
-            <h3>Display:</h3>
-            <div class="numeros">
-                <div>1</div>
-                <div>2</div>
-                <div>3</div>
-                <div>4</div>
-                <div>6</div>
-                <div>7</div>
-                <div>8</div>
-                <div>9</div>
-            </div>
-        </section>
+<section>
+    <h2>1. Display</h2>
+    <p>Block:</p>
+    <div class="box block">1</div>
+    <div class="box block">2</div>
+
+    <p>Inline:</p>
+    <div class="box inline">A</div>
+    <div class="box inline">B</div>
+
+    <p>None:</p>
+    <div class="flex">
+        <div class="box">1</div>
+        <div class="none">2</div>
+        <div class="box">3</div>
+    </div>
+</section>
+
+<section>
+    <h2>2. Visibility</h2>
+    <p>Hidden:</p>
+    <div class="flex">
+        <div class="box">1</div>
+        <div class="box hidden">2</div>
+        <div class="box">3</div>
+    </div>
+</section>
+
+<section>
+    <h2>3. Overflow</h2>
+    <p>Visible (el contenido se sale):</p>
+    <div class="parent-overflow o-visible">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum velit eum saepe amet dolores, tempora idskcdksdkjdscdkj
+    </div>
+
+    <p>Hidden:</p>
+    <div class="parent-overflow o-hidden">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur nobis laudantium vitae incidunt libero facere aperiam sapiente, consequatur temporibus voluptate nam adipisci quasi dolorem assumenda dolorum obcaecati reprehenderit modi deleniti.
+    </div>
+
+    <p>Scroll:</p>
+    <div class="parent-overflow o-scroll">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla, corrupti, natus numquam, ipsum assumenda eveniet excepturi labore nesciunt molestiae voluptatibus error similique repudiandae. Eos nesciunt rerum impedit dolor recusandae ab.
+    </div>
+</section>
+
+<section>
+    <h2>Z-Index Stack</h2>
+    <div class="z-container">
+        <div class="z-box gris-oscuro">1</div>
+        <div class="z-box gris-medio">2</div>
+        <div class="z-box gris-claro">3</div>
+    </div>
+</section>
     </main>
 </body>
 </html>

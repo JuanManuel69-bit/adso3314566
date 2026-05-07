@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20-pseudoclasses</title>
+    <link rel="stylesheet" href="/src/css/03-css.css">
+    <style>
+    section div, section p {
+    margin-bottom: 30px;
+    padding: 10px;
+}
+
+.link:link { 
+    color: green; 
+}
+
+.visited:visited { 
+    color: gray; 
+}
+
+.active:active { 
+    color: red; 
+}
+
+.hover:hover { 
+    background-color: orange; 
+}
+
+.focus:focus { 
+    background-color: yellow; 
+    border: 2px solid orange; 
+}
+
+.first-letter::first-letter { 
+    font-size: 30px; 
+    font-weight: bold; 
+    color: purple; 
+}
+
+.first-line::first-line { 
+    text-transform: uppercase; 
+    color: blue; 
+}
+
+.first-child p:first-child { 
+    color: darkorange; 
+    font-weight: bold; 
+}
+
+.before::before { 
+    content: "👉 "; 
+}
+
+.after::after { 
+    content: " 👈"; 
+}
+
+.lang-it:lang(it) { 
+    font-style: italic; 
+}
+</style>
+</head>
+
+<body>
+    <a href="/03-css/index.html" class="btn-home">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256">
+            <path
+                d="M184,72H128V32a8,8,0,0,0-13.66-5.66l-96,96a8,8,0,0,0,0,11.32l96,96A8,8,0,0,0,128,224V184h56a8,8,0,0,0,8-8V80A8,8,0,0,0,184,72Zm-8,96H120a8,8,0,0,0-8,8v28.69L35.31,128,112,51.31V80a8,8,0,0,0,8,8h56Zm48-88v96a8,8,0,0,1-16,0V80a8,8,0,0,1,16,0Z">
+            </path>
+        </svg>
+    </a>
+    <main>
+        <header>
+            <h1 id="h1_1">20 Pseudoclasses</h1>
+            <h2>Is used to define a special state of an element.</h2>
+        </header>
+        <section>
+    <div>
+        <h3>Enlaces (Link, Visited, Active, Hover)</h3>
+        <a href="https://ejemplo-nuevo.com" class="link">Soy un enlace verde si no me has clicado</a><br>
+        <a href="" class="visited">Ya visitado</a><br>
+        <a href="#" class="active">Al dar click se pondra rojo</a><br>
+        <p class="hover">Poner cursor encima para ver el fondo</p>
+    </div>
+
+    <div>
+        <h3>Entrada de texto (Focus)</h3>
+        <input type="text" class="focus">
+    </div>
+
+    <div>
+        <h3>Texto (First-letter, First-line)</h3>
+        <p class="first-letter">Narita Top Road es una gran corredora.</p>
+        <p class="first-line">Azul y en Mayusculas<br>Normal</p>
+    </div>
+
+    <div class="first-child">
+        <p class="first-child">Primero</p> 
+        <p>Segundo</p>
+    </div>
+
+    <div>
+        <h3>Insertar contenido (Before, After)</h3>
+        <p class="before">Texto con un dedo antes</p>
+        <p class="after">Texto con un dedo después</p>
+    </div>
+
+    <div>
+        <h3>Idioma (Lang)</h3>
+        <p lang="it" class="lang-it">Este texto está marcado como italiano.</p>
+    </div>
+</section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>15-position</title>
+    <link rel="stylesheet" href="/src/css/03-css.css">
+    <style>
+div.normal {
+    background-color: black;
+    border: 4px solid purple;
+    height: 200px;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div.relative {
+    background-color: #fff;
+    color: black;
+    border: 4px solid purple;
+    height: 200px;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+div.relative div {
+    border: 4px solid black;
+    background-color: aqua;
+    margin-right: 60px;
+    position: relative;
+    top: 70px;
+    left: 60px;
+}
+
+div.absolute {
+    background-color: #fff;
+    border: 4px solid purple;
+    height: 200px;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+div.absolute div {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    color: white;
+}
+
+div.fixed {
+    border: 4px solid purple;
+    height: 200px;
+    width: 200px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+div.sticky {
+    border: 4px solid purple;
+    height: 400px;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    position: sticky;
+    top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+div.sticky .info-box {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border: 2px solid white;
+    font-size: 0.9rem;
+    text-align: center;
+}
+    </style>
+</head>
+
+<body>
+    <a href="/03-css/index.html" class="btn-home">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256">
+            <path
+                d="M184,72H128V32a8,8,0,0,0-13.66-5.66l-96,96a8,8,0,0,0,0,11.32l96,96A8,8,0,0,0,128,224V184h56a8,8,0,0,0,8-8V80A8,8,0,0,0,184,72Zm-8,96H120a8,8,0,0,0-8,8v28.69L35.31,128,112,51.31V80a8,8,0,0,0,8,8h56Zm48-88v96a8,8,0,0,1-16,0V80a8,8,0,0,1,16,0Z">
+            </path>
+        </svg>
+    </a>
+    <main>
+        <header>
+            <h1 id="h1_1">15-Position</h1>
+            <h2>Position of the conten in the page</h2>
+        </header>
+        <section>
+    <h3>Normal/Static:</h3>
+    <div class="normal">Normal</div>
+
+    <h3>Relative:</h3>
+    <div class="relative">
+        <div>Relative</div>
+    </div>
+
+    <h3>Absolute:</h3>
+    <div class="absolute">
+        <div class="absolute_child">Absolute</div>
+    </div>
+
+    <h3>Fixed:</h3>
+    <div class="fixed">Fixed</div>
+
+    <h3>Sticky:</h3>
+    <div class="sticky">
+        <strong>Sticky Box</strong>
+        <div class="info-box">
+            Narita Top Road es una Uma Musume conocida por su determinación y rivalidad con T.M. Opera O. Se esfuerza por alcanzar la victoria en las carreras de larga distancia con una actitud siempre positiva.
+        </div>
+    </div>
+    <div style="height: 1000px;"></div>
+</section>
+    </main>
+</body>
+
+</html>

@@ -13,27 +13,35 @@
             margin: 1rem auto;
             width: 256px;
         }
-
         div#sprite.sp1 {background-position: calc(-256px *0) 0;}
-
         div#sprite.sp2 {background-position: calc(-256px *1) 0;}
-
         div#sprite.sp3 {background-position: calc(-256px *2) 0;}
-
         div#sprite.sp4 {background-position: calc(-256px *3) 0;}
-
         div#sprite.sp5 {background-position: calc(-256px *4) 0;}
-
         div#sprite.sp6 {background-position: calc(-256px *5) 0;}
+
+        div#transform {
+            background: url(/src/imgs/dragon_ball_super_budokai_ssj3_goku_sprite.jpg);
+            height: 180px; 
+            width: 200px; 
+            margin: 1rem auto;
+            background-repeat: no-repeat;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        /* Coordenadas exactas para la primera fila */
+        div#transform.tr1 { background-position: -20px -15px; }   
+        div#transform.tr2 { background-position: -185px -15px; }  
+        div#transform.tr3 { background-position: -355px -15px; }  
+        div#transform.tr4 { background-position: -535px -15px; }  
+        div#transform.tr5 { background-position: -720px -15px; }  
     </style>
 </head>
 
 <body>
     <a href="/03-css/index.html" class="btn-home">
         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256">
-            <path
-                d="M184,72H128V32a8,8,0,0,0-13.66-5.66l-96,96a8,8,0,0,0,0,11.32l96,96A8,8,0,0,0,128,224V184h56a8,8,0,0,0,8-8V80A8,8,0,0,0,184,72Zm-8,96H120a8,8,0,0,0-8,8v28.69L35.31,128,112,51.31V80a8,8,0,0,0,8,8h56Zm48-88v96a8,8,0,0,1-16,0V80a8,8,0,0,1,16,0Z">
-            </path>
+            <path d="M184,72H128V32a8,8,0,0,0-13.66-5.66l-96,96a8,8,0,0,0,0,11.32l96,96A8,8,0,0,0,128,224V184h56a8,8,0,0,0,8-8V80A8,8,0,0,0,184,72Zm-8,96H120a8,8,0,0,0-8,8v28.69L35.31,128,112,51.31V80a8,8,0,0,0,8,8h56Zm48-88v96a8,8,0,0,1-16,0V80a8,8,0,0,1,16,0Z"></path>
         </svg>
     </a>
     <main>
@@ -42,21 +50,34 @@
             <h2>An image sprite is a collection of images put into a single image.</h2>
         </header>
         <section>
+            <h3>Runner</h3>
             <div id="sprite" class="sp1"></div>
+            
+            <h3>Transformation</h3>
+            <div id="transform" class="tr1"></div>
         </section>
     </main>
-    <script>
-        const sprite = document.getElementById('sprite')
-        const numSprite = 6
-        let count = 1
-        setInterval(() =>{
-            sprite.className=''
-            sprite.classList.add('sp'+count)
-            if(count == numSprite) count=1
-            else count ++
 
-        }, 50)
+    <script>
+        // Runner (6 frames)
+        const runnerElement = document.getElementById('sprite');
+        const runnerFrames = 6;
+        let runnerCount = 1;
+
+        setInterval(() => {
+            runnerElement.className = 'sp' + runnerCount;
+            runnerCount = (runnerCount % runnerFrames) + 1;
+        }, 80);
+
+        // Transformación (5 frames)
+        const transformElement = document.getElementById('transform');
+        const transformFrames = 5;
+        let transformCount = 1;
+
+        setInterval(() => {
+            transformElement.className = 'tr' + transformCount;
+            transformCount = (transformCount % transformFrames) + 1;
+        }, 200);
     </script>
 </body>
-
 </html>

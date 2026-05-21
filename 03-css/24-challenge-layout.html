@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,6 +16,7 @@
             padding-top: 2rem;
             margin: 0;
         }
+
         div.logo {
             background: url(/src/imgs/spriteweb.png) no-repeat;
             background-position: -20px -434px;
@@ -22,12 +24,22 @@
             margin-bottom: 2rem;
             width: 180px;
         }
+
         .menu {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
             width: 100%;
         }
+
+        .menu_2 {
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+
         div.box {
             display: flex;
             background-color: #14522d;
@@ -42,19 +54,140 @@
             border-bottom: 5px solid #fff;
             cursor: pointer;
         }
-        div.box:hover{
+
+        div.box_2 {
+            display: flex;
+            color: black;
+            justify-content: center;
+            align-items: center;
+            margin: 10px;
+            padding: 15px 30px;
+            font-family: sans-serif;
+            font-weight: bold;
+            text-transform: uppercase;
+            border-bottom: 5px solid #fff;
+            cursor: pointer;
+        }
+
+        div.box:hover {
             border-bottom-color: #ffff00;
         }
+
+        div.box_2:hover {
+            border-bottom-color: green;
+        }
+
+
         section {
-    background-color: #14522d;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 12px;
-    width: 750px;
-    padding: 25px;
-    margin: 20px auto;
-}
+            background-color: #14522d;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            width: 900px;
+            padding: 25px;
+            margin: 20px auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+        }
+
+        section div.img_1 {
+            background: url(/src/imgs/spriteweb.png);
+            background-position: -518px -3px;
+            width: 270px;
+            height: 206px;
+            border: 3px solid #fff;
+            position: relative;
+            cursor: pointer;
+        }
+
+        section div.img_1>div {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 40%;
+            background-color: rgba(255, 255, 255, 0.60);
+            color: #000;
+            font-family: sans-serif;
+            font-weight: bold;
+            font-size: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+            box-sizing: border-box;
+            transition: background-color 0.3s ease;
+        }
+
+        section div.img_1:hover>div {
+            background-color: rgba(255, 255, 255, 0.85);
+        }
+
+        section div.sprite_imgs_2 {
+            background-color: #fff;
+            border: 6px solid #14522d;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 20px 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 25px;
+        }
+
+        section div.sprite_imgs_2>div:nth-child(2) {
+            flex: 1;
+            color: #14522d;
+            font-family: sans-serif;
+            font-size: 16px;
+            line-height: 1.5;
+            text-align: justify;
+            margin: 0;
+        }
+
+        section div.img_2 {
+            background-image: url(/src/imgs/spriteweb.png);
+            background-repeat: no-repeat;
+            background-position: -300px -489px;
+            width: 120px;
+            height: 120px;
+            flex-shrink: 0;
+        }
+
+        section div.img_2_2 {
+            background-image: url(/src/imgs/spriteweb.png);
+            background-repeat: no-repeat;
+            background-position: -90px -172px;
+            width: 115px;
+            height: 225px;
+            flex-shrink: 0;
+        }
+
+        section.column {
+            flex-direction: column;
+        }
+
+        section.sprite_imgs_3 {
+            background-color: #fff;
+            width: 900px;
+            padding: 25px;
+            margin: 20px auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+        }
+        div.img_3{
+            background-image: url(/src/imgs/spriteweb.png);
+            background-repeat: no-repeat;
+            background-position: -480px -432px;
+            width: 300px;
+            height: 170px;
+        }
     </style>
 </head>
+
 <body>
     <main>
         <div class="logo"></div>
@@ -65,11 +198,62 @@
             <div class="box">Servicios</div>
             <div class="box">Contacto</div>
         </div>
-        <section>
-            <div class="img_1">Sprite01</div>
-            <div class="img_2">Sprite02</div>
-            <div class="img_3">Sprite03</div>
+
+        <section class="sprite_imgs">
+            <div class="img_1">
+                <div>Sprite 01</div>
+            </div>
+            <div class="img_1">
+                <div>Sprite 02</div>
+            </div>
+            <div class="img_1">
+                <div>Sprite 03</div>
+            </div>
+        </section>
+        <section class="column">
+            <div class="sprite_imgs_2">
+                <div class="img_2"></div>
+                <div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, magnam. Porro corrupti, iste
+                        expedita mollitia labore suscipit ea praesentium voluptate nostrum aut inventore fugiat nisi eum
+                        recusandae earum libero voluptas.</p>
+                </div>
+                <div class="img_2_2"></div>
+            </div>
+
+            <div class="sprite_imgs_2">
+                <div class="img_2"></div>
+                <div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, magnam. Porro corrupti, iste
+                        expedita mollitia labore suscipit ea praesentium voluptate nostrum aut inventore fugiat nisi eum
+                        recusandae earum libero voluptas.</p>
+                </div>
+                <div class="img_2_2"></div>
+            </div>
+
+            <div class="sprite_imgs_2">
+                <div class="img_2"></div>
+                <div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, magnam. Porro corrupti, iste
+                        expedita mollitia labore suscipit ea praesentium voluptate nostrum aut inventore fugiat nisi eum
+                        recusandae earum libero voluptas.</p>
+                </div>
+                <div class="img_2_2"></div>
+            </div>
+        </section>
+        <div>
+            <section class="sprite_imgs_3">
+                <div class="img_3"></div>
+                <div class="menu_2">
+                    <div class="box_2">Inicio</div>
+                    <div class="box_2">Nosotros</div>
+                    <div class="box_2">Portafolio</div>
+                    <div class="box_2">Servicios</div>
+                    <div class="box_2">Contacto</div>
+                </div>
+        </div>
         </section>
     </main>
 </body>
+
 </html>

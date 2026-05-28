@@ -6,6 +6,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>26-border-radius</title>
     <link rel="stylesheet" href="/src/css/03-css.css">
+    <style>
+        div.bor {
+            background-color: #fff9;
+            height: 140px;
+            margin-block: 1rem;
+            margin-inline: auto;
+            width: 140px;
+            border-radius: 50%;
+        }
+
+        div.bor_2 {
+            background-color: #fff9;
+            height: 140px;
+            margin-block: 1rem;
+            margin-inline: auto;
+            width: 140px;
+            border-radius: 40px 0;
+        }
+
+        div.bor_3 {
+            background-color: #fff9;
+            height: 140px;
+            margin-block: 1rem;
+            margin-inline: auto;
+            width: 140px;
+            border-radius: 140px 0 0 140px;
+        }
+
+        div.bor_4 {
+            background-color: #fff9;
+            height: 140px;
+            margin-block: 1rem;
+            margin-inline: auto;
+            width: 140px;
+            border-radius: 140px 0 140px 140px;
+        }
+    </style>
 </head>
 
 <body>
@@ -22,8 +59,22 @@
             <h2>Property defines the radius of the element's corners.</h2>
         </header>
         <section>
-            
+            <h2>Border-radius 50%</h2>
+            <div class="bor"></div>
+        </section>
+        <section>
+            <h2>Border-radius 40px 0</h2>
+            <div class="bor_2"></div>
+        </section>
+        <section>
+            <h2>Border-radius 140px 0 0 140px</h2>
+            <div class="bor_3"></div>
+        </section>
+        <section>
+            <h2>Border-radius 140px 0 140px 140px</h2>
+            <div class="bor_4"></div>
         </section>
     </main>
 </body>
+
 </html>

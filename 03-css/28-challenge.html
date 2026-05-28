@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>28-challenge</title>
+    <link rel="stylesheet" href="/src/css/03-css.css">
+    <style>
+        figure.frame{
+            background: #fff;
+            height: calc(50 * 20px);
+            width: calc(36 * 20px);
+            margin: 2rem auto;
+            zoom: 0.70;
+        }
+        div.squares{
+            background: url(/src/imgs/square.png);
+            opacity: 0.4;
+            z-index: 2;
+            margin-top: -20px;
+            height: calc(50 * 20px);
+        }
+        div.goku{
+            background-color: #000;
+            height: 20px;
+            margin-bottom: 0;
+            width: 20px;
+            box-shadow: 220px 40px 0 0 rgb(64, 62, 62),
+                        220px 60px 0 0 rgb(64, 62, 62),
+                        220px 80px 0 0 rgb(64, 62, 62),
+                        220px 100px 0 0 rgb(64, 62, 62),
+                        220px 100px 0 0 rgb(64, 62, 62),
+                        240px 60px 0 0 rgb(64, 62, 62),
+                        220px 100px 0 0 rgb(64, 62, 62),
+                        240px 80px 0 0 #27DDF5,
+                        260px 80px 0 0 rgb(64, 62, 62),
+                        280px 100px 0 0 rgb(64, 62, 62),
+                        300px 100px 0 0 rgb(64, 62, 62),
+                        320px 120px 0 0 rgb(64, 62, 62),
+                        340px 120px 0 0 rgb(64, 62, 62),
+                        360px 120px 0 0 rgb(64, 62, 62),
+                        360px 100px 0 0 rgb(64, 62, 62),
+                        360px 80px 0 0 rgb(64, 62, 62),
+                        360px 60px 0 0 rgb(64, 62, 62),
+                        380px 80px 0 0 rgb(64, 62, 62),
+                        400px 100px 0 0 rgb(64, 62, 62),
+                        420px 120px 0 0 rgb(64, 62, 62),
+                        440px 140px 0 0 rgb(64, 62, 62),
+                        460px 140px 0 0 rgb(64, 62, 62),
+                        480px 120px 0 0 rgb(64, 62, 62),
+                        480px 100px 0 0 rgb(64, 62, 62),
+                        500px 140px 0 0 rgb(64, 62, 62),
+                        500px 160px 0 0 rgb(64, 62, 62),
+                        520px 180px 0 0 rgb(64, 62, 62),
+                        520px 200px 0 0 rgb(64, 62, 62),
+                        520px 220px 0 0 rgb(64, 62, 62),
+                        540px 220px 0 0 rgb(64, 62, 62),
+                        560px 200px 0 0 rgb(64, 62, 62),
+                        580px 180px 0 0 rgb(64, 62, 62),
+                        580px 200px 0 0 rgb(64, 62, 62),
+                        580px 240px 0 0 rgb(64, 62, 62),
+                        580px 220px 0 0 rgb(64, 62, 62),
+                        580px 260px 0 0 rgb(64, 62, 62),
+                        560px 280px 0 0 rgb(64, 62, 62),
+                        540px 300px 0 0 rgb(64, 62, 62),
+                        520px 300px 0 0 rgb(64, 62, 62),
+                        500px 300px 0 0 rgb(64, 62, 62),
+                        520px 320px 0 0 rgb(64, 62, 62),
+                        520px 340px 0 0 rgb(64, 62, 62),
+                        540px 360px 0 0 rgb(64, 62, 62),
+                        540px 380px 0 0 rgb(64, 62, 62),
+                        540px 400px 0 0 rgb(64, 62, 62),
+                        540px 420px 0 0 rgb(64, 62, 62),
+                        540px 460px 0 0 rgb(64, 62, 62),
+                        540px 440px 0 0 rgb(64, 62, 62),
+                        540px 480px 0 0 rgb(64, 62, 62),
+                        540px 500px 0 0 rgb(64, 62, 62),
+                        560px 500px 0 0 rgb(64, 62, 62),
+                        560px 380px 0 0 rgb(64, 62, 62),
+                        560px 400px 0 0 rgb(64, 62, 62),
+                        560px 420px 0 0 rgb(64, 62, 62),
+                        580px 380px 0 0 rgb(64, 62, 62),
+                        600px 380px 0 0 rgb(64, 62, 62),
+                        620px 380px 0 0 rgb(64, 62, 62),
+                        640px 400px 0 0 rgb(64, 62, 62),
+                        640px 420px 0 0 rgb(64, 62, 62),
+                        640px 440px 0 0 rgb(64, 62, 62),
+                        660px 460px 0 0 rgb(64, 62, 62),
+                        660px 480px 0 0 rgb(64, 62, 62),
+                        660px 500px 0 0 rgb(64, 62, 62),
+                        640px 520px 0 0 rgb(64, 62, 62),
+                        640px 540px 0 0 rgb(64, 62, 62),
+                        640px 560px 0 0 rgb(64, 62, 62),
+                        640px 580px 0 0 rgb(64, 62, 62),
+                        620px 600px 0 0 rgb(64, 62, 62),
+                        620px 620px 0 0 rgb(64, 62, 62),
+                        600px 620px 0 0 rgb(64, 62, 62),
+                        580px 620px 0 0 rgb(64, 62, 62),
+                        560px 600px 0 0 rgb(64, 62, 62),
+                        540px 580px 0 0 rgb(64, 62, 62),
+                        520px 580px 0 0 rgb(64, 62, 62),
+                        500px 560px 0 0 rgb(64, 62, 62),
+                        480px 560px 0 0 rgb(64, 62, 62),
+                        460px 580px 0 0 rgb(64, 62, 62),
+                        460px 600px 0 0 rgb(64, 62, 62),
+                        440px 620px 0 0 rgb(64, 62, 62),
+                        420px 620px 0 0 rgb(64, 62, 62),
+                        420px 640px 0 0 rgb(64, 62, 62),
+                        440px 660px 0 0 rgb(64, 62, 62),
+                        460px 680px 0 0 rgb(64, 62, 62),
+                        480px 680px 0 0 rgb(64, 62, 62),
+                        500px 700px 0 0 rgb(64, 62, 62),
+                        520px 720px 0 0 rgb(64, 62, 62),
+                        540px 720px 0 0 rgb(64, 62, 62),
+                        560px 740px 0 0 rgb(64, 62, 62),
+                        560px 760px 0 0 rgb(64, 62, 62),
+                        580px 780px 0 0 rgb(64, 62, 62),
+                        600px 800px 0 0 rgb(64, 62, 62),
+                        600px 820px 0 0 rgb(64, 62, 62),
+                        600px 840px 0 0 rgb(64, 62, 62),
+                        580px 860px 0 0 rgb(64, 62, 62),
+                        580px 880px 0 0 rgb(64, 62, 62),
+                        580px 900px 0 0 rgb(64, 62, 62),
+                        600px 920px 0 0 rgb(64, 62, 62),
+                        600px 940px 0 0 rgb(64, 62, 62),
+                        620px 960px 0 0 rgb(64, 62, 62),
+                        600px 980px 0 0 rgb(64, 62, 62),
+                        580px 980px 0 0 rgb(64, 62, 62),
+                        560px 980px 0 0 rgb(64, 62, 62),
+                        540px 960px 0 0 rgb(64, 62, 62),
+                        540px 940px 0 0 rgb(64, 62, 62),
+                        540px 920px 0 0 rgb(64, 62, 62),
+                        520px 900px 0 0 rgb(64, 62, 62),
+                        520px 880px 0 0 rgb(64, 62, 62),
+                        500px 880px 0 0 rgb(64, 62, 62),
+                        480px 880px 0 0 rgb(64, 62, 62),
+                        460px 860px 0 0 rgb(64, 62, 62),
+                        460px 840px 0 0 rgb(64, 62, 62),
+                        460px 820px 0 0 rgb(64, 62, 62),
+                        440px 820px 0 0 rgb(64, 62, 62),
+                        420px 800px 0 0 rgb(64, 62, 62),
+                        400px 800px 0 0 rgb(64, 62, 62),
+                        380px 780px 0 0 rgb(64, 62, 62),
+                        360px 780px 0 0 rgb(64, 62, 62),
+                        340px 780px 0 0 rgb(64, 62, 62),
+                        320px 780px 0 0 rgb(64, 62, 62),
+                        300px 780px 0 0 rgb(64, 62, 62),
+                        280px 780px 0 0 rgb(64, 62, 62),
+                        260px 780px 0 0 rgb(64, 62, 62),
+                        240px 780px 0 0 rgb(64, 62, 62),
+                        220px 780px 0 0 rgb(64, 62, 62),
+                        200px 800px 0 0 rgb(64, 62, 62),
+                        200px 820px 0 0 rgb(64, 62, 62),
+                        180px 840px 0 0 rgb(64, 62, 62),
+                        180px 860px 0 0 rgb(64, 62, 62),
+                        180px 880px 0 0 rgb(64, 62, 62),
+                        160px 900px 0 0 rgb(64, 62, 62),
+                        160px 920px 0 0 rgb(64, 62, 62),
+                        160px 940px 0 0 rgb(64, 62, 62),
+                        140px 960px 0 0 rgb(64, 62, 62),
+                        120px 960px 0 0 rgb(64, 62, 62),
+                        100px 960px 0 0 rgb(64, 62, 62),
+                        80px 960px 0 0 rgb(64, 62, 62),
+                        60px 940px 0 0 rgb(64, 62, 62),
+                        80px 920px 0 0 rgb(64, 62, 62),
+                        100px 900px 0 0 rgb(64, 62, 62),
+                        120px 900px 0 0 rgb(64, 62, 62),
+                        120px 880px 0 0 rgb(64, 62, 62),
+                        120px 860px 0 0 rgb(64, 62, 62),
+                        100px 840px 0 0 rgb(64, 62, 62),
+                        80px 820px 0 0 rgb(64, 62, 62),
+                        60px 800px 0 0 rgb(64, 62, 62),
+                        60px 780px 0 0 rgb(64, 62, 62);
+        }
+    </style>
+</head>
+
+<body>
+    <a href="/03-css/index.html" class="btn-home">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256">
+            <path
+                d="M184,72H128V32a8,8,0,0,0-13.66-5.66l-96,96a8,8,0,0,0,0,11.32l96,96A8,8,0,0,0,128,224V184h56a8,8,0,0,0,8-8V80A8,8,0,0,0,184,72Zm-8,96H120a8,8,0,0,0-8,8v28.69L35.31,128,112,51.31V80a8,8,0,0,0,8,8h56Zm48-88v96a8,8,0,0,1-16,0V80a8,8,0,0,1,16,0Z">
+            </path>
+        </svg>
+    </a>
+    <main>
+        <header>
+            <h1 id="h1_1">28 Challenge</h1>
+            <h2>
+                Pixel Art: Goku SSGSS
+                Using box-shadow
+            </h2>
+        </header>
+        <section>
+            <figure class="frame">
+                <div class="goku"></div>
+                <div class="squares"></div>
+            </figure>
+        </section>
+    </main>
+</body>
+</html>

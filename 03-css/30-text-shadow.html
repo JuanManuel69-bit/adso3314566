@@ -5,8 +5,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>30-text-shadow</title>
-    <link rel="stylesheet" href="/src/css/03-css.css">
+    <link class="css" rel="stylesheet" href="/src/css/03-css.css">
     <style>
+        main {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .demo-text {
+            font-size: 3.5rem;
+            font-weight: 900;
+            margin: 1rem 0;
+            text-transform: uppercase;
+        }
+        .shadow-basic {
+            color: black;
+            text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.3);
+        }
+        .shadow-neon {
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            text-shadow: 0 0 5px #fff,
+                0 0 10px #ff00de,
+                0 0 20px #ff00de,
+                0 0 40px #ff00de;
+        }
+        .shadow-3d {
+            color: #f1c40f;
+            text-shadow: 1px 1px 0px #c0392b,
+                2px 2px 0px #c0392b,
+                3px 3px 0px #c0392b,
+                4px 4px 0px #c0392b,
+                5px 5px 0px #c0392b,
+                6px 6px 8px rgba(0, 0, 0, 0.6);
+        }
+        .shadow-retro {
+            color: #3498db;
+            text-shadow: 5px 5px 0px #2ecc71,
+                10px 10px 0px #e74c3c;
+        }
     </style>
 </head>
 
@@ -24,7 +63,16 @@
             <h2>Adds shadows to text.</h2>
         </header>
         <section>
+            <h3>1. Sombra Básica</h3>
+            <p class="demo-text shadow-basic">Sombra Suave</p>
+            <h3>2. Efecto Neón</h3>
+            <p class="demo-text shadow-neon">Glow Neon</p>
+            <h3>3. Efecto 3D</h3>
+            <p class="demo-text shadow-3d">Texto 3D</p>
+            <h3>4. Efecto Retro</h3>
+            <p class="demo-text shadow-retro">Retro Style</p>
         </section>
     </main>
 </body>
+
 </html>

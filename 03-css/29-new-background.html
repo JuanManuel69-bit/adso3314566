@@ -7,10 +7,10 @@
     <title>29-new-background</title>
     <link rel="stylesheet" href="/src/css/03-css.css">
     <style>
-        section div.mult{
+        section div.mult {
             background: url(../src/imgs/bg3.png),
-            url(../src/imgs/bg2.png),
-            url(../src/imgs/bg1.png);
+                url(../src/imgs/bg2.png),
+                url(../src/imgs/bg1.png);
             background-size: contain;
             background-position: center;
             background-repeat: no-repeat;
@@ -19,13 +19,116 @@
             margin-left: auto;
             margin-right: auto;
         }
-        div.gr{
+
+        div.gr {
             background: linear-gradient(to right, purple 27%, black);
             height: 200px;
             width: 340px;
             border: solid 5px black;
             margin-left: auto;
             margin-right: auto;
+        }
+
+        div.gr_2 {
+            background: linear-gradient(to right, red 27%, black);
+            height: 200px;
+            width: 340px;
+            border: solid 5px black;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        div.gr_3 {
+            background: linear-gradient(to right, gray 27%, black);
+            height: 200px;
+            width: 340px;
+            border: solid 5px black;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        div.gradient_1 {
+            height: 200px;
+            width: 340px;
+            border: solid 5px black;
+            margin-left: auto;
+            margin-right: auto;
+            background: linear-gradient(to bottom,
+                    #ffcd00 50%,
+                    #003087 50%,
+                    #003087 75%,
+                    #c8102e 75%);
+        }
+
+        div.gradient_2 {
+            background: linear-gradient(to right, #fff 50%, #333 50%);
+            background-size: 37px;
+            height: 200px;
+            width: 340px;
+            border: solid 5px black;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        div.gradient_3 {
+            background: radial-gradient(circle, #caa1e7, #210337);
+            height: 200px;
+            width: 340px;
+            border: solid 5px black;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        div.gradient_4 {
+            background: radial-gradient(circle, #fff 20%,
+                    #333 20%,
+                    #333 40%,
+                    #fff 40%,
+                    #fff 60%,
+                    #333 60%,
+                    #333 80%,
+                    #fff 80%);
+            height: 370px;
+            width: 340px;
+            border: solid 5px black;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        div.gradient_5 {
+            background: conic-gradient(red, orange, yellow, green, blue);
+            height: 200px;
+            width: 340px;
+            border: solid 5px black;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        main section h4 {
+            margin: 0;
+            text-align: center;
+            font-weight: 900;
+            font-size: 8rem;
+        }
+        h4.clip1 {
+            background: linear-gradient(45deg, #82009f 0%, #f7345e 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        h4.clip2 {
+            background: url(/src/imgs/fire.jpg) no-repeat center;
+            background-size: cover;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        div.mask {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(to top, red, yellow);
+            mask-image: url(/src/imgs/mask.svg.svg);
+            zoom: 2.4;
+            margin: 2rem auto;
+            mask-size: 100% 100%;
         }
     </style>
 </head>
@@ -48,7 +151,27 @@
             <div class="mult"></div>
             <h3>Gradients</h3>
             <div class="gr"></div>
+            <h3>linear-gradient(to right, red 27%, black);</h3>
+            <div class="gr_2"></div>
+            <h3>linear-gradient(to right, gray 27%, black);</h3>
+            <div class="gr_3"></div>
+            <h3>Colombia Flag</h3>
+            <div class="gradient_1"></div>
+            <h3>Vertical Lines</h3>
+            <div class="gradient_2"></div>
+            <h3>radial-gradient(shape, color1, color2)</h3>
+            <div class="gradient_3"></div>
+            <h3>BullsEye</h3>
+            <div class="gradient_4"></div>
+            <h3>conic-gradient(color1, color2)</h3>
+            <div class="gradient_5"></div>
+            <h3>Bgs Clip</h3>
+            <h4 class="clip1">ADSO</h4>
+            <h4 class="clip2">fire</h4>
+            <h3>Bg Mask</h3>
+            <div class="mask"></div>
         </section>
     </main>
 </body>
+
 </html>

@@ -4,59 +4,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>31-filters</title>
+    <title>32-clip-path</title>
     <link rel="stylesheet" href="/src/css/03-css.css">
     <style>
-        div.filter_0 {
+        div.path{
             background: url(/src/imgs/belle.jpg) no-repeat center;
             background-size: contain;
             width: 400px;
             height: 300px;
             margin-left: auto;
             margin-right: auto;
+            clip-path: circle(40%);
         }
-        div.filter:hover {
-            filter: none;
-        }
-        div.filter_1{
+        div.path_2{
             background: url(/src/imgs/belle.jpg) no-repeat center;
             background-size: contain;
             width: 400px;
             height: 300px;
             margin-left: auto;
             margin-right: auto;
-            filter: blur(5px);
-            transition: filter 0.3s ease;
+            clip-path: ellipse(50% 40%);
         }
-        div.filter_2{
+        div.path_3{
             background: url(/src/imgs/belle.jpg) no-repeat center;
             background-size: contain;
             width: 400px;
             height: 300px;
             margin-left: auto;
             margin-right: auto;
-            filter: hue-rotate(90deg);
-            transition: filter 0.3s ease;
-        }
-        div.filter_3{
-            background: url(/src/imgs/belle.jpg) no-repeat center;
-            background-size: contain;
-            width: 400px;
-            height: 300px;
-            margin-left: auto;
-            margin-right: auto;
-            filter: grayscale(100%);
-            transition: filter 0.3s ease;
-        }
-        div.filter_4{
-            background: url(/src/imgs/belle.jpg) no-repeat center;
-            background-size: contain;
-            width: 400px;
-            height: 300px;
-            margin-left: auto;
-            margin-right: auto;
-            filter: invert(100%);
-            transition: filter 0.3s ease;
+            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
         }
     </style>
 </head>
@@ -69,22 +45,17 @@
     </a>
     <main>
         <header>
-            <h1 id="h1_1">31 Filters</h1>
-            <h2>Defines visual effects (like blur and saturation).</h2>
+        <h1 id="h1_1">32 Clip path</h1>
+        <h2>Property lets you clip an element to a basic shape.</h2>
         </header>
         <section>
-            <h3>Original</h3>
-            <div class="filter_0"></div>
-            <h3>Blur</h3>
-            <div class="filter filter_1"></div>
-            <h3>hue-rotate</h3>
-            <div class="filter filter_2"></div>
-            <h3>Grayscale</h3>
-            <div class="filter filter_3"></div>
-            <h3>Invert</h3>
-            <div class="filter filter_4"></div>
+        <h3>Circle</h3>
+        <div class="path"></div>
+        <h3>Ellipse</h3>
+        <div class="path_2"></div>
+        <h3>Star</h3>
+        <div class="path_3"></div>
         </section>
     </main>
 </body>
-
 </html>

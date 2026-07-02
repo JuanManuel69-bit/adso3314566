@@ -4,12 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Uma Musume Challenge</title>
+    <title>responsive challenge</title>
     <style>
-        * {
-            box-sizing: border-box;
-            transition: all 0.3s ease;
-        }
         body {
             font-family: 'Poppins', sans-serif;
             background-color: #f0f4f8;
@@ -25,10 +21,9 @@
             text-align: center;
             margin-bottom: 3rem;
         }
-        header.logo {
-            max-width: 350px;
-            width: 100%;
-            height: auto;
+        .logo {
+            width: 300px;
+            height: 200px;
         }
         .umas {
             display: grid;
@@ -37,7 +32,7 @@
             margin-bottom: 4rem;
         }
         
-        .kitasan {
+        .carta {
             background-color: #fff;
             border-radius: 12px;
             overflow: hidden;
@@ -46,89 +41,17 @@
             padding-bottom: 1rem; 
             cursor: pointer; 
         }
-        .kitasan img {
+        .carta img {
             width: 100%;
             height: 250px;
             object-fit: cover;
         }
-        .kitasan h3 {
+        .carta h3 {
             margin: 1rem 0 0 0;
             font-size: 1.2rem;
             color: #333;
         }
-        .kitasan:hover h3 {
-            color: #ff577f;
-            text-shadow: 0 0 8px rgba(255, 87, 127, 0.3); 
-        }
-
-        .satono {
-            background-color: #fff;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-            text-align: center;
-            padding-bottom: 1rem; 
-            cursor: pointer; 
-        }
-        .satono img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-        }
-        .satono h3 {
-            margin: 1rem 0 0 0;
-            font-size: 1.2rem;
-            color: #333;
-        }
-        .satono:hover h3 {
-            color: #ff577f;
-            text-shadow: 0 0 8px rgba(255, 87, 127, 0.3); 
-        }
-
-        .tokai {
-            background-color: #fff;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-            text-align: center;
-            padding-bottom: 1rem; 
-            cursor: pointer; 
-        }
-        .tokai img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-        }
-        .tokai h3 {
-            margin: 1rem 0 0 0;
-            font-size: 1.2rem;
-            color: #333;
-        }
-        .tokai:hover h3 {
-            color: #ff577f;
-            text-shadow: 0 0 8px rgba(255, 87, 127, 0.3); 
-        }
-
-        .mejiro {
-            background-color: #fff;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-            text-align: center;
-            padding-bottom: 1rem; 
-            cursor: pointer; 
-        }
-        .mejiro img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-        }
-        .mejiro h3 {
-            margin: 1rem 0 0 0;
-            font-size: 1.2rem;
-            color: #333;
-        }
-        .mejiro:hover h3 {
+        .carta:hover h3 {
             color: #ff577f;
             text-shadow: 0 0 8px rgba(255, 87, 127, 0.3); 
         }
@@ -196,19 +119,19 @@
             <img src="/src/imgs/uma_logo.jpg" class="logo">
         </header>
         <section class="umas">
-            <div class="kitasan">
+            <div class="carta">
                 <img src="/src/imgs/kitasan.jpg" alt="Kitasan Black">
                 <h3>Kitasan Black</h3>
             </div>
-            <div class="satono">
+            <div class="carta">
                 <img src="/src/imgs/satono.jpg" alt="Satono Diamond">
                 <h3>Satono Diamond</h3>
             </div>
-            <div class="tokai">
+            <div class="carta">
                 <img src="/src/imgs/tokai.jpg" alt="Tokai Teio">
                 <h3>Tokai Teio</h3>
             </div>
-            <div class="mejiro">
+            <div class="carta">
                 <img src="/src/imgs/mejiro.jpg" alt="Mejiro McQueen">
                 <h3>Mejiro McQueen</h3>
             </div>

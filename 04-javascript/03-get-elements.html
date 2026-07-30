@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03-get-elements</title>
+    <link rel="stylesheet" href="/04-javascript/css/js.css">
+</head>
+<body>
+
+    <a href="./index.html" class="btn-home" aria-label="Volver al inicio">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256">
+            <path d="M184,72H128V32a8,8,0,0,0-13.66-5.66l-96,96a8,8,0,0,0,0,11.32l96,96A8,8,0,0,0,128,224V184h56a8,8,0,0,0,8-8V80A8,8,0,0,0,184,72Zm-8,96H120a8,8,0,0,0-8,8v28.69L35.31,128,112,51.31V80a8,8,0,0,0,8,8h56Zm48-88v96a8,8,0,0,1-16,0V80a8,8,0,0,1,16,0Z"></path>
+        </svg>
+    </a>
+
+    <main>
+        <header>
+            <h1>03 Get Elements</h1>
+            <h2>Access and manipulate HTML elements using JavaScript.</h2>
+        </header>
+        <section>
+            <h3>Get Element By Id:</h3>
+            <h4 id="year"></h4>
+            <h3>Get Elements By Tag Name:</h3>
+            <ul>
+                <li>🍎</li>
+                <li>🫐</li>
+                <li>🍊</li>
+                <li>🍒</li>
+            </ul>
+            <h4></h4>
+            <h3>Get Elements By Class Name</h3>
+            <p class="paragraph">Lorem ipsum dolor</p>
+            <p class="paragraph">Lorem ipsum dolor</p>
+            <p class="paragraph">Lorem ipsum dolor</p>
+            <h3>Query Selector & Query Selector All</h3>
+            <figure class="animal first">🦊</figure>
+            <figure class="animal">🐼</figure>
+            <figure class="animal">🐷</figure>
+        </section>
+    </main>
+    <script>
+        // Get Element by ID
+        const year = document.getElementById('year')
+        const ndate = new Date;
+        year.textContent = `Present Year: ${ndate.getFullYear()}`;
+
+
+        // Get Elements By TagName
+        const fruits = document.getElementsByTagName('li')
+        const h4s = document.getElementsByTagName('h4')
+
+        h4s[1].textContent = `There are ${fruits.length} fruits`
+        h4s[1].textContent += ` & last fruit is ${fruits.length}`
+    </script>
+
+</body>
+</html>

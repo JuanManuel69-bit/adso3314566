@@ -52,7 +52,25 @@
         const h4s = document.getElementsByTagName('h4')
 
         h4s[1].textContent = `There are ${fruits.length} fruits`
-        h4s[1].textContent += ` & last fruit is ${fruits.length}`
+        h4s[1].innerHTML += ` & first fruit is ${fruits[0].textContent}`
+        h4s[1].innerHTML += ` & last fruit is ${fruits[fruits.length-1].textContent}`
+
+        // Get Elements By ClassName
+        const ps = document.getElementsByClassName('paragraph')
+        ps[1].textContent = 'new text value'
+        ps[1].style.backgroundColor = 'red'
+        ps[1].style.color = 'white'
+        ps[1].style.padding = '0.4rem'
+
+        // QuerySelector & QuerySelectorAll
+        const first = document.querySelector('figure.first')
+        first.style.backgroundColor = 'orange'
+
+        const animals = document.querySelectorAll('figure.animal')
+        // Static & Large way
+        // animals[0].style.borderRadius = '50%';
+        // Dinamic & Short way
+        animals.forEach(elemt => {element.style.borderRadius = '50%'})
     </script>
 
 </body>

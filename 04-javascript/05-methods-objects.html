@@ -129,15 +129,15 @@
                 btnAttack.disabled = true;
                 btnFeed.disabled = true;
                 setTimeout(() => {
+                    btnFeed.disabled = false;
                     if (this.hp > 0) {
                         btnAttack.disabled = false;
-                        btnFeed.disabled = false;
                     }
                 }, 1200);
             },
 
             feed: function() {
-                if(this.hp > 0 && this.hp < 200){
+                if(this.hp >= 0 && this.hp < 200){
                     this.disableButtons();
                     this.hp += 25;
                     this.status = 'feed';
@@ -155,8 +155,6 @@
                         this.status = 'dead';
                         pkImage.classList.remove('alive', 'attack', 'feed');
                         this.updateHp('animate__shakeX');
-                        btnAttack.disabled = true;
-                        btnFeed.disabled = true;
                     } else {
                         this.status = 'attack';
                         pkImage.classList.remove('alive', 'feed', 'dead');

@@ -6,6 +6,144 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>07-vehicle-object</title>
     <link rel="stylesheet" href="/04-javascript/css/js.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        main section div.vehicle img {
+            all: unset;
+        }
+
+        div.vehicle {
+            --bg-card: #282C34;
+            --bg-btn: #3A3F4D;
+            --bg-btn-hover: #484E5E;
+            --text-color: #FFFFFF;
+            --text-sub: #A0A5B1;
+
+            background-color: var(--bg-card);
+            border-radius: 12px;
+            width: 380px;
+            padding: 16px;
+            margin: 0 auto;
+            color: var(--text-color);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        div.vehicle.light {
+            --bg-card: #EAEBED;
+            --bg-btn: #FFFFFF;
+            --bg-btn-hover: #DDE0E6;
+            --text-color: #1E222B;
+            --text-sub: #5A606C;
+        }
+
+        div.vehicle header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        div.vehicle header .logo {
+            background: url('/04-javascript/imgs/vehicle/logo.png') no-repeat center / contain;
+            height: 45px;
+            width: 130px;
+            margin: 0;
+        }
+
+        div.vehicle header button.mode {
+            background-color: var(--bg-btn);
+            color: var(--text-color);
+            border: none;
+            border-radius: 8px;
+            padding: 8px 12px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: background 0.3s ease;
+        }
+
+        div.vehicle header button.mode:hover {
+            background-color: var(--bg-btn-hover);
+        }
+
+        .nav-section {
+            display: grid;
+            grid-template-columns: 60px 1fr 60px;
+            gap: 8px;
+        }
+
+        .btn-action {
+            background-color: var(--bg-btn);
+            color: var(--text-color);
+            border: none;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 4px;
+            cursor: pointer;
+            font-size: 0.75rem;
+            gap: 4px;
+            transition: all 0.2s ease;
+        }
+
+        .btn-action:hover {
+            background-color: var(--bg-btn-hover);
+        }
+
+        .btn-action i {
+            font-size: 1.1rem;
+        }
+
+        .title-box {
+            background-color: var(--bg-btn);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .info-panel {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px;
+        }
+
+        .display-area {
+            position: relative;
+            height: 180px;
+            border-radius: 8px;
+            overflow: hidden;
+            background: #1e222b url('/04-javascript/imgs/vehicle/bg.png') no-repeat center / cover;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+        }
+
+        .display-area img.car {
+            width: 80%;
+            height: auto;
+            object-fit: contain;
+            margin-bottom: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .controls-panel {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 6px;
+        }
+    </style>
 </head>
 
 <body>
@@ -16,15 +154,204 @@
             </path>
         </svg>
     </a>
+
     <main>
         <header>
             <h1 id="h1_1">07 Vehicle Object</h1>
             <h2>Create and manipulate a vehicle object with properties.</h2>
         </header>
+
         <section>
-            <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="100%" height="450" src="https://embed.figma.com/design/YnGqcDmF5gpow4vVh160pC/JS-Class-Vehicle?node-id=25-3&embed-host=share" allowfullscreen></iframe>
+            <div class="vehicle">
+                <header>
+                    <figure class="logo"></figure>
+                    <button class="mode">
+                        <i class="fa-solid fa-moon"></i>
+                        <span>Mode</span>
+                    </button>
+                </header>
+                <div class="nav-section">
+                    <button class="btn-action prev">
+                        <i class="fa-solid fa-backward-step"></i>
+                        <span>Prev</span>
+                    </button>
+                    <div class="title-box"></div>
+                    <button class="btn-action next">
+                        <i class="fa-solid fa-forward-step"></i>
+                        <span>Next</span>
+                    </button>
+                </div>
+
+                <div class="info-panel">
+                    <button class="btn-action btn-model">
+                        <i class="fa-solid fa-car"></i>
+                        <span class="model">Model</span>
+                    </button>
+                    <button class="btn-action btn-refer">
+                        <i class="fa-solid fa-car-side"></i>
+                        <span class="refer">Refer</span>
+                    </button>
+                    <button class="btn-action btn-color">
+                        <i class="fa-solid fa-car-rear"></i>
+                        <span class="color">Color</span>
+                    </button>
+                </div>
+
+                <div class="display-area">
+                    <img src="/04-javascript/imgs/vehicle/car01.webp" alt="Vehicle" class="car">
+                </div>
+
+                <div class="controls-panel">
+                    <button class="btn-action btn-on">
+                        <i class="fa-solid fa-power-off"></i>
+                        <span>On</span>
+                    </button>
+                    <button class="btn-action btn-forw">
+                        <i class="fa-solid fa-circle-arrow-right"></i>
+                        <span>Forw</span>
+                    </button>
+                    <button class="btn-action btn-stop">
+                        <i class="fa-regular fa-square"></i>
+                        <span>Stop</span>
+                    </button>
+                    <button class="btn-action btn-back">
+                        <i class="fa-solid fa-circle-arrow-left"></i>
+                        <span>Back</span>
+                    </button>
+                    <button class="btn-action btn-off">
+                        <i class="fa-solid fa-power-off"></i>
+                        <span>Off</span>
+                    </button>
+                </div>
+            </div>
         </section>
     </main>
+
+    <script>
+        // Elements
+        const vhc = document.querySelector('.vehicle');
+        const modeBtn = document.querySelector('.mode');
+        const modeIcon = modeBtn.querySelector('i');
+        const titleBox = document.querySelector('.title-box');
+        const carImg = document.querySelector('.car');
+
+        // Labels (Attributes)
+        const lmodel = document.querySelector('.model');
+        const lrefer = document.querySelector('.refer');
+        const lcolor = document.querySelector('.color');
+        const limage = document.querySelector('.image')
+
+        // Buttons
+        const bnext = document.querySelector('.next');
+        const bprev = document.querySelector('.prev');
+
+        // Variables
+        let index = 0;
+
+        // Object 
+        const vehicles = {
+            attrs: [
+                { brand: 'Volkswagen', refer: 'Golf GTI', model: '2024', color: 'Purple', image: '/04-javascript/imgs/vehicle/car02.png' },
+                { brand: 'Mazda', refer: 'Mazda 3 Sedan', model: '2023', color: 'Orange', image: '/04-javascript/imgs/vehicle/car03.png' },
+                { brand: 'Honda', refer: 'Civic Sedan', model: '2022', color: 'Yellow', image: '/04-javascript/imgs/vehicle/car01.png' },
+                { brand: 'BMW', refer: '3 Series', model: '2023', color: 'Blue', image: '/04-javascript/imgs/vehicle/car04.png' },
+                { brand: 'Toyota', refer: 'Corolla Hatchback', model: '2023', color: 'Silver', image: '/04-javascript/imgs/vehicle/car05.png' }
+            ]
+        };
+
+        // Class
+        class Vehicle {
+            constructor(brand, refer, model, color, image) {
+                this.brand = brand;
+                this.refer = refer;
+                this.model = model;
+                this.color = color;
+                this.image = image;
+                this.displayData();
+                this.updateNavButtons();
+            }
+
+            disabledButton(btn) {
+                btn.style.pointerEvents = 'none';
+                btn.style.opacity = '0.2';
+            }
+
+            enabledButton(btn) {
+                btn.style.pointerEvents = 'auto';
+                btn.style.opacity = '1';
+            }
+
+            updateNavButtons() {
+                // Si está en el primer elemento
+                if (index === 0) {
+                    this.disabledButton(bprev);
+                    this.enabledButton(bnext);
+                }
+                // Si está en el último elemento
+                else if (index === vehicles.attrs.length - 1) {
+                    this.disabledButton(bnext);
+                    this.enabledButton(bprev);
+                }
+                // Si está en un elemento intermedio
+                else {
+                    this.enabledButton(bprev);
+                    this.enabledButton(bnext);
+                }
+            }
+
+            displayData() {
+                titleBox.textContent = this.brand;
+                lmodel.textContent = this.model;
+                lrefer.textContent = this.refer;
+                lcolor.textContent = this.color;
+                carImg.src = this.image;
+            }
+
+            update(data) {
+                this.brand = data.brand;
+                this.refer = data.refer;
+                this.model = data.model;
+                this.color = data.color;
+                this.image = data.image;
+                this.displayData();
+                this.updateNavButtons();
+            }
+        }
+
+        // Instancia inicial del vehículo
+        const car = new Vehicle(
+            vehicles.attrs[index].brand,
+            vehicles.attrs[index].refer,
+            vehicles.attrs[index].model,
+            vehicles.attrs[index].color,
+            vehicles.attrs[index].image
+        );
+
+        // Eventos Next / Prev
+        bnext.addEventListener('click', function () {
+            if (index < vehicles.attrs.length - 1) {
+                index++;
+                car.update(vehicles.attrs[index]);
+            }
+        });
+
+        bprev.addEventListener('click', function () {
+            if (index > 0) {
+                index--;
+                car.update(vehicles.attrs[index]);
+            }
+        });
+
+        // Dark mode y Light mode
+        modeBtn.addEventListener('click', () => {
+            vhc.classList.toggle('light');
+            if (vhc.classList.contains('light')) {
+                modeIcon.className = 'fa-solid fa-sun';
+            } else {
+                modeIcon.className = 'fa-solid fa-moon';
+            }
+        });
+    </script>
 </body>
 
 </html>
